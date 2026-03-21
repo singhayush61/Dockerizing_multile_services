@@ -7,9 +7,11 @@ services:
   redis:
     image: 'redis:latest'
   nginx:
-    depends_on: 
-    - api
-    - client
+    depends_on:
+      api:
+        condition: service_started
+      client:
+        condition: service_started
     restart: always
     build: 
       dockerfile: Dockerfile.dev
@@ -39,6 +41,8 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
+    environment:
+      - WDS_SOCKET_PORT=0
   worker:
     build:
       dockerfile: Dockerfile.dev
