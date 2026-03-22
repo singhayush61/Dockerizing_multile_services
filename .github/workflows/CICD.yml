@@ -57,5 +57,5 @@ jobs:
    #       environment_name: DockerMultiService-env # Change to your EB Env Name
    #       region: us-east-1
    #       version_label: ${{ github.sha }}
-   #       deployment_package: Dockerrun.aws.json
+   #       deployment_package: docker-compose.yml
    #
