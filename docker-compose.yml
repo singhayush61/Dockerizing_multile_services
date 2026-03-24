@@ -1,14 +1,14 @@
 version: "3"
 services:
-  redis:
-    image: 'valkey/valkey:latest'
-    mem_limit: 128m
-
-  postgres:
-    image: 'postgres:latest'
-    mem_limit: 128m
-    environment:
-      - POSTGRES_PASSWORD=$PGPASSWORD # AWS will inject this from Environment Properties
+#  redis:
+#    image: 'valkey/valkey:latest'
+#    mem_limit: 128m
+#
+#  postgres:
+#    image: 'postgres:latest'
+#    mem_limit: 128m
+#    environment:
+#      - POSTGRES_PASSWORD=$PGPASSWORD # AWS will inject this from Environment Properties
   client:
     image: "ayushsingh0/multi-client"
     mem_limit: 128m
