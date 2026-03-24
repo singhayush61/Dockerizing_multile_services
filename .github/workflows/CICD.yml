@@ -54,7 +54,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: docker-multi-service # Change to your EB App Name
-          environment_name: DockerMultiService-env # Change to your EB Env Name
+          environment_name: Docker-multi-service-env  # Change to your EB Env Name
           region: us-east-1
           version_label: ${{ github.sha }}
           deployment_package: docker-compose.yml
